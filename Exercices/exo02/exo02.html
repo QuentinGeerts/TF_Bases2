@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // Chaîne: « ma formation javascript »
+    // ● Avec la chaîne ci - dessus :
+    // ○ Retourner la position de « ma »
+    // ○ Indiquer l’indice de la lettre « p »
+    // ○ Retrouver la lettre située à l’indice 21
+    // ○ Remplacer « javascript » par « Java »
+    // ○ Découper la chaîne avec le délimiteur «  » (espace)
+    // ○ Inverser la chaîne de caractères(+ difficile) :
+    // « ma formation javascript » → « tpircsavaj noitamrof am »
+
+    let str = "ma formation javascript"
+
+    // Retourner la position de « ma »
+    console.log(str.indexOf("ma"));
+
+    // Indiquer l’indice de la lettre « p »
+    console.log(str.search("p"));
+    console.log(str.indexOf("p"));
+
+    // Retrouver la lettre située à l’indice 21
+    console.log(str.charAt(21));
+
+    // Remplacer « javascript » par « Java »
+    console.log(str.replace("javascript", "Java"));
+    
+    // Découper la chaîne avec le délimiteur «  » (espace)
+    console.log(str.split(" "));
+
+    // Inverser la chaîne de caractères(+ difficile) :
+    // « ma formation javascript » → « tpircsavaj noitamrof am »
+
+    // 1. Transformer la chaine de caracètres en tableau (split)
+    // 2. Retourner le tableau (reverse)
+    // 3. Retransformer le tableau en chaine de caractères (join)
+
+    let strSplit = str.split("");
+    console.log(strSplit);
+    
+    let reversedStrSplit = strSplit.reverse();
+    console.log(reversedStrSplit);
+
+    let reversedStr = reversedStrSplit.join("");
+    console.log(reversedStr);
+
+    // --- 
+
+    let reverseString = str.split("").reverse().join("");
+    console.log(reverseString);
+
+  </script>
+
+</body>
+
+</html>
