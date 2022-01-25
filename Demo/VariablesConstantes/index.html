@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    // NaN : Not a Number => pas un nombre
+    console.log(NaN);
+
+    console.log(isNaN(12)); // false
+    console.log(isNaN("12")); // false
+    console.log(isNaN("A")); // true
+
+    console.log(isNaN(true)); // false
+    console.log(isNaN(false)); // false
+
+    console.log(isNaN(Number.isNaN)); // true
+
+    // Infinity
+    console.log(1 / Infinity);
+    console.log(Infinity / 1);
+    console.log(Infinity / Infinity);
+
+    // Undefined
+    let a;
+    console.log(a);
+    console.log(a == undefined);
+    console.log(typeof a);
+    
+    let b = 5;
+    console.log(b);
+    console.log(b == undefined);
+    console.log(typeof b);
+
+    // Math
+    console.log(Math.PI);
+    console.log(Math.random());
+
+    // Number
+    console.log(Number);
+
+    // Constantes
+    const URL_API = `https://www.mon-api.com/`
+    console.log(URL_API);
+    // URL_API = `https://ww.mon-api2.com`
+
+    // Typage
+    let c = 5;
+    console.log(c);
+    console.log(typeof c);
+    
+    c = "bonjour"
+    console.log(c);
+    console.log(typeof c);
+
+    // LET - VAR - CONST
+
+    // const => constante
+    // var et let => variable
+
+    var var1 = 5;
+
+    if (true) {
+      console.log(var1); // possible
+      var var1 = 12;
+    }
+
+    console.log(var1); // var1 = 12
+
+    // ---
+
+    let var2 = 5;
+
+    if (true) {
+      // console.log(var2); // pas possible
+      let var2 = 12;
+    }
+    
+    console.log(var2); // var1 = 5
+    
+    // ---
+    
+    const var3 = 5;
+    
+    if (true) {
+      // console.log(var3); // pas possible
+      const var3 = 12;
+    }
+
+    console.log(var3); // var1 = 5
+
+    // Typage 
+    let varBool = true; 
+    console.log(typeof varBool);
+    console.log(varBool);
+    
+    let varNull = null;
+    console.log(typeof varNull);
+    console.log(varNull);
+
+    let varNumber = 12.5;
+    console.log(typeof varNumber);
+    console.log(varNumber);
+
+    let varString = "Bonjour";
+    console.log(typeof varString);
+    console.log(varString);
+
+    let varUndefined; // pas été initialisé
+    console.log(typeof varUndefined);
+    console.log(varUndefined);
+
+    let varObject = { nom : 'Geerts',  prenom : 'Quentin' }
+    console.log(typeof varObject);
+    console.log(varObject);
+
+    // Conversion => string
+    console.log(varBool, varBool.toString());
+    console.log(varNumber, varNumber.toString());
+    console.log(varString, varString.toString());
+    console.log(varObject, varObject.toString());
+
+    // Conversion => types primitifs
+    let strNumber = "12.5"
+    console.log(strNumber, parseInt(strNumber));
+    console.log(strNumber, parseFloat(strNumber));
+    console.log("a", parseInt("a", 16));
+
+    // Typeof & Constructor
+    const array = [1, 2, 3, 4, 5]
+    console.log(typeof array);
+    console.log(array.constructor);
+
+    console.log(typeof varObject);
+    console.log(varObject.constructor);
+
+    const date = new Date()
+    console.log(typeof date);
+    console.log(date.constructor);
+
+    console.log(typeof null);
+    // console.log(null.constructor); // pas possible
+
+    const func = () => {}
+    console.log(typeof func);
+    console.log(func.constructor);
+  </script>
+
+</body>
+
+</html>
