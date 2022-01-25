@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    const array1 = [1, 2, 3, 4]
+    const array2 = new Array(1, 2, 3, 4)
+    const array3 = new Array(4);
+    const array4 = []
+
+    // console.log(array1);
+    // console.log(array2);
+    // console.log(array3);
+    // console.log(array4);
+
+    // Premier élément du tableau 
+    console.log(array1[0]);
+
+    // Dernier élément du tableau
+    console.log(array1[array1.length - 1]);
+
+    // Taille du tableau 
+    console.log(array1.length);
+
+    // Tableau associatif
+    const array5 = []
+    array5["planete1"] = "Mercure"
+    array5["planete2"] = "Venus"
+    array5["planete3"] = "Terre"
+    array5["planete4"] = "Mars"
+    array5[0] = "Planètes"
+
+    console.log(array5);
+    console.log(array5['planete2']);
+    console.log(array5.planete2);
+    console.log(array5[3]);
+
+    console.log(Object.keys(array5).length);
+
+    const array6 = [12, 12.5, "a", function () { }, {}, undefined, null]
+
+    console.log(array6);
+
+    // Functions
+    // toString : Renvoie les valeurs du tableau sous forme de string séparées par des virgules
+    console.log(array1.toString());
+
+    // join(*) :  Idem que toString() mais on peut spécifier le séparateur
+    console.log(array1.join(' | '));
+
+    // pop() : Retire le dernier élément du tableau
+    console.log(array1.pop());
+    console.log(array1);
+
+    // push() : Ajoute un élément à la fin du tableau
+    console.log(array1.push(1));
+    console.log(array1);
+
+    // shift() Retire le premier élément du tableau, et replace bien les éléments suivants.
+    console.log(array1.shift());
+    console.log(array1)
+
+    // unshift() Ajoute un élément au début du tableau en réarrangeant les éléments suivants.
+    console.log(array1.unshift(10));
+    console.log(array1)
+
+    // length : Retourne le nombre d’élément du tableau
+    console.log(array1.length);
+
+    // splice(a,b,el1,el2,…) Permet d’ajouter les élément 1, 2,… à partir de l’emplacement a, en supprimant b éléments.
+    
+    // Première surcharge
+    
+    // console.log(array1);
+    // console.log(array1.splice(1));
+    // console.log(array1);
+    
+    // console.log(array1);
+    // console.log(array1.splice(1, 1));
+    // console.log(array1);
+
+    // Deuxième surcharge
+
+    // console.log(array1);
+    // console.log(array1.splice(1, 0, 0, 0));
+    // console.log(array1);
+
+    // sort() : Permet de trier alphabétiquement le tableau (attention, comportement différent avec des nombres)
+    console.clear();
+
+    // const firstNames = [
+    //   'Quentin',
+    //   'Bilel',
+    //   'Antoine',
+    //   'Delphine',
+    //   'Aurélien',
+    //   'Youssef',
+    //   'Lucas',
+    // ]
+
+    // console.log(firstNames.sort());
+    // console.log(array1.sort());
+    
+    // // ES5
+    // console.log(array1.sort(function (a, b) { return a - b }));
+
+    // // ES6
+    // console.log(array1.sort((a, b) => a - b));
+
+    // reverse() : Inverse les élément du tableau
+    console.log(array1)
+    console.log(array1.reverse());
+    
+    // concat(tab2) Permet de concaténer le tab2 au tableau
+    console.log(array1.concat(array2));
+    console.log(array1)
+
+    // slice(a,b) : Découpe le tableau entre l’élément a et l’élément b
+
+    console.log(array1.slice(1, 2)); // [3]
+    const arrayCopy = array1.slice();
+    console.log(arrayCopy);
+
+
+  </script>
+
+</body>
+
+</html>
