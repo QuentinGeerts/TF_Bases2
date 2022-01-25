@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // Récupère la date local du client (navigateur)
+    const date1 = new Date()
+    console.log(date1)
+
+    // Créer une date sur base d'un timestamp (1/1/1970)
+    const date2 = new Date(1643125937252)
+    console.log(date2);
+
+    // Créer une date sur base d'un format date
+    const date3 = new Date('1990-01-01 23:59:59')
+    console.log(date3);
+
+    // Créer une date sur base d'un objet date existant
+    const date4 = new Date(date1)
+    console.log(date4);
+
+    // Créer une date avec différents paramètres
+    const date5 = new Date(1996, 3, 3, 21, 27, 39)
+    console.log(date5);
+  </script>
+</body>
+
+</html>
