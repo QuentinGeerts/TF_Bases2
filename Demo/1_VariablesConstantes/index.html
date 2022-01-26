@@ -67,6 +67,7 @@
     // var et let => variable
 
     var var1 = 5;
+    var var1 = 4;
 
     if (true) {
       console.log(var1); // possible
@@ -78,9 +79,11 @@
     // ---
 
     let var2 = 5;
+    // let var2 = 4; // redéclaration impossible
 
     if (true) {
-      // console.log(var2); // pas possible
+      // console.warn(var2); 
+      // pas possible à condition de ne pas le redéclarer dans le bloc if
       let var2 = 12;
     }
     

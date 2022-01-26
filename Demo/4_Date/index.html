@@ -30,6 +30,35 @@
     // Créer une date avec différents paramètres
     const date5 = new Date(1996, 3, 3, 21, 27, 39)
     console.log(date5);
+
+    // Fonctions 
+
+    // Getters
+    // Récupération de l'année sur 4 chiffres
+    console.log(date1.getFullYear());
+
+    // Récupération du mois (attention : janvier => 0)
+    console.log(date1.getMonth());
+
+    // Récupération du jour du mois
+    console.log(date1.getDate());
+
+    // Récupération du jour de la semaine
+    // Attention => dimanche => 0 & samedi => 6
+    console.log(date1.getDay());
+
+    // Récupération de l'heure
+    console.log(date1.getHours());
+    console.log(date1.getMinutes());
+    console.log(date1.getSeconds());
+    console.log(date1.getMilliseconds());
+
+    // Récupération de la date en Timestamp
+    console.log(date1.getTime());
+
+    // Setters
+    console.log(date1.setFullYear(2030));
+    console.log(date1);
   </script>
 </body>
 

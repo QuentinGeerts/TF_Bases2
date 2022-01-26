@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- <a href="https://www.google.com">Clique ici</a> -->
+  <a href="javascript:void(0)" onclick="alert('OK')">Clique ici</a>
+
+  <script>
+    // Opérateur d'affectation simple
+    let a = 1;
+
+    // a += 3 // a = a + 3
+    // a -= 3 // a = a - 3
+    // a *= 3 // a = a * 3
+    // a /= 3 // a = a / 3
+    // a %= 3 // a = a % 3
+
+    console.log("a", a);
+    // == : comparer la valeur de a avec celle de 5
+    console.log("a == 5", a == 5)
+    console.log("a != 5", a != 5)
+
+    // Nouveauté en JS
+
+    // comparer la valeur de a avec celle de 5 mais en plus vous allez également comparer leur type
+    // a : number | b : number => true
+    // a : 5 | b : 5 => true 
+    // ==> true
+    console.log("a === 5", a === 5) 
+
+    // a : number | b : string => false
+    // a : 5 | b : 5 => true 
+    // ==> false
+    console.log("a === '5'", a === '5') 
+
+    // a : 5 | b : 5 => true 
+    // ==> tru
+    console.log("a == '5'", a == '5') 
+
+    // a : number | b : string => true
+    // a : 5 | b : 5 => false 
+    // ==> true
+    console.log('a !== "5" :>> ', a !== "5");
+
+    // Opérateur ternaire / conditionnel
+
+    console.log(`Je possède ${a} pomme${(a > 1 ? 's' : '')}`);
+
+    let b = (a == 4 ? 'OK' : 'KO')
+  
+    // Pré/Post-incrémentation
+
+    let c = 1;
+
+    // post-incrémentation
+    console.log( c++, c );
+    console.log( c--, c );
+    
+
+    // pré-incrémentation
+    console.log( ++c, c );
+    console.log( --c, c );
+
+
+  </script>
+</body>
+
+</html>
