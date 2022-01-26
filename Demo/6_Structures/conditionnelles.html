@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // Structures conditionnelles
+
+    // IF ... ELSE
+    let temperature = 6
+
+    if (temperature >= 5 && temperature <= 15) {
+      console.log("Allumage de la chaudière");
+    }
+    else {
+      console.log("Éteint la chaudière");
+    }
+
+    // Opérateur ternaire 
+
+    // (condition) ? (cond_vrai) : (cond_fausse)
+
+    console.log(
+      temperature >= 5 && temperature <= 15
+        ? "Allume la chaudière"
+        : "Eteint la chaudière"
+    );
+
+    // IF .. ELSE IF ... ELSE
+    let height = 145
+
+    if (height > 195) {
+      console.log("Vous êtes un géant");
+    }
+    else if (height > 180) {
+      console.log("Vous êtes grand");
+    }
+    else if (height > 160) {
+      console.log("Vous êtes de taille normale");
+    }
+    else if (height > 150) {
+      console.log("Vous êtes de petite taille");
+    }
+    else {
+      console.log("Votre taille n'est pas reprise dans les tailles mentionnées.");
+    }
+
+    // Switch
+
+    let fruit = 'ananas'
+
+    switch(fruit) {
+      case 'pomme' : 
+        console.log("Prix : ", 1.2, "€ / kg");
+        break
+
+      case 'poire' : 
+        console.log("Prix : ", 1.4, "€ / kg");
+        break
+
+      case 'mangue' :
+
+      case 'ananas' : 
+        console.log("Prix : ", 2.2, "€ / kg");
+        break
+
+      default:
+        console.log("Votre fruit n'est pas reconnu");
+    }
+
+    let value = 8 
+
+    switch(value) {
+      case 1 :
+      case 2 :
+      case 3 :
+        console.log("La valeur vaut de 1 à 3")
+        break
+      
+      case 4 :
+      case 5 :
+      case 6 :
+        console.log("La valeur vaut de 4 à 6")
+        break
+
+      case 7 :
+      case 8 :
+      case 9 :
+        console.log("La valeur vaut de 7 à 9")
+        break
+
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // -- While
+
+    // Déclaration + Initialisation
+    let cpt = 10
+
+    // Condition
+    while (cpt < 10) {
+      // Do some code ...
+      console.log('cpt :>> ', cpt);
+      // Do some code ...
+
+      // Incrémentation ou modification
+      cpt++
+    }
+
+    // -- Do ... While
+
+    // Déclaration + Initialisation
+    let cpt2 = 10
+
+    do {
+      // Do some code ...
+      console.log('cpt2 :>> ', cpt2);
+      // Do some code ...
+
+      // Incrémentation ou modification
+      cpt2++
+
+      // Condition
+    } while (cpt2 < 10)
+
+    // -- For (classique)
+
+    // initia. - condition - incrémentation
+    for (let cpt3 = 0; cpt3 < 10; cpt3++) {
+      console.log('cpt3 :>> ', cpt3);
+    }
+
+    // -- For (foreach => in)
+
+    let firstnames = [
+      "Quentin",
+      "Lucas",
+      "Antoine",
+      "Aylin",
+      "Charles"
+    ]
+
+    console.log('firstnames :>> ', firstnames);
+
+    for (const index in firstnames) {
+      // console.log('key :>> ', key);
+      console.log(`firstnames[${index}] :>> `, firstnames[index]);
+    }
+
+    let persons = [
+      {
+        lastname: 'Geerts',
+        firstname: 'Quentin',
+        origin: 'Belgium',
+        lang: 'french',
+        age: 25,
+        birthdate: new Date(1996, 3, 3)
+      },
+      {
+        lastname: 'Geerts',
+        firstname: 'Benjamin',
+        origin: 'Belgium',
+        lang: 'french',
+        age: 23,
+        birthdate: new Date(1998, 3, 3)
+      },
+    ]
+
+    console.log('persons :>> ', persons);
+
+    for (const prop in persons) {
+      console.log(`persons[${prop}] :>> `, persons[prop]);
+    }
+
+    // -- For (foreach => of)
+
+    for (const value of firstnames) {
+      console.log('value :>> ', value);
+    }
+
+    for (const letter of "object") {
+      console.log('letter :>> ', letter);
+    }
+
+    for (const person of persons) {
+      console.log('person :>> ', person);
+      console.log(person.lastname + " " + person.firstname);
+      console.log(person.birthdate);
+      console.log(person.origin);
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>
