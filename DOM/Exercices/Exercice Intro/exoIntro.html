@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .text-red {
+      color: red
+    }
+
+    .text-blue {
+      color: blue
+    }
+
+    .bold {
+      font-size: 18px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="demo">
+    
+
+  </div>
+
+  <script>
+
+    const demo = document.getElementById('demo')
+    // console.log('demo :>> ', demo);
+
+    const demoTitle = document.createElement('h1')
+    demoTitle.innerText = 'Mon exercice'
+    demoTitle.setAttribute('id', 'demoTitle')
+    demoTitle.setAttribute('class', 'text-blue')
+    demoTitle.setAttribute('title', 'Mon beau titre bleu')
+
+    demo.appendChild(demoTitle)
+
+    const demoText = document.createElement('p')
+    demoText.innerHTML = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam et, exercitationem adipisci fugit neque illum non ipsum nam, quos inventore aperiam corporis, facere voluptatum at repellendus qui ut magni? Dicta!'
+
+    demoText.setAttribute('id', 'demoText')
+    demoText.setAttribute('class', 'text-red')
+
+    demoText.onmouseenter = function () {
+      this.setAttribute('class', 'bold')
+    }
+
+    demoText.onmouseleave = function () {
+      this.setAttribute('class', 'text-red')
+    }
+
+    demo.appendChild(demoText)
+
+  </script>
+
+</body>
+
+</html>
