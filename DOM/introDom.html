@@ -12,14 +12,13 @@
 
   <script>
 
-    let myString = prompt("Entrez votre chaine à inverser :")
+    afficherProprietes(screen)
 
-    inverser(myString)
-
-    function inverser(chaine) {
-      let str = chaine.split("").reverse().join("")
-      console.log(str)
-      alert(str)
+    function afficherProprietes(obj) {
+      for (const prop in obj) {
+        let valeur = obj[prop]
+        document.write(`${prop} ::> ${valeur}<br>`)
+      }
     }
 
   </script>

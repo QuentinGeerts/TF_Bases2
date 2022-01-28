@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="demo" title="Bloc demo" class="demo">
+
+    <p id="demoTest">
+      ...
+    </p>
+    
+    <h1 id="demoTitle">Demo DOM</h1>
+    <p id="demoParagraph">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, tempora? Tempora quidem quae nisi, natus ipsam iusto velit odit nostrum cumque quod. Qui deserunt enim veniam facere iste, autem perferendis.
+    </p>
+
+    <p id="demoParagraph2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos magni maxime vitae recusandae cumque at harum rem eaque illo officiis perferendis, excepturi nisi dolore eum autem voluptatum. Sit, eveniet earum.
+    </p>
+  </div>
+
+  <script>
+
+    // -- GetElementByID
+
+    const demoTitle = document.getElementById('demoTitle')
+    console.log('demoTitle :>> ', demoTitle);
+
+    demoTitle.textContent = 'Bonjour à tous'
+
+    demoTitle.onclick = function () {
+      alert(demoTitle.textContent)
+    }
+
+    const demo = document.getElementById('demo')
+    console.log('demo :>> ', demo);
+
+    // -- GetElementsByTagName
+
+    const pList = document.getElementsByTagName('p')
+
+    console.log('pList :>> ', pList);
+
+    // -- CreateElement
+
+    const demoTitle2 = document.createElement('h2')
+    demoTitle2.innerText = 'Titre de niveau 2'
+    
+    
+
+
+    // -- Attributes
+    console.log('demo.attributes :>> ', demo.attributes)
+    console.log('demo.attributes[1] :>> ', demo.attributes[1])
+    console.log('demo.attributes.title :>> ', demo.attributes.title)
+
+    console.log('demo.parentNode :>> ', demo.parentNode);
+    console.log('demoTitle.parentNode :>> ', demoTitle.parentNode);
+
+    console.log('demo.nodeName :>> ', demo.nodeName);
+    console.log('demo.attributes[1].nodeName :>> ', demo.attributes[1].nodeName);
+
+    console.log('demo.textContent :>> ', demo.textContent);
+    console.log('demo.innerText :>> ', demo.innerText);
+    console.log('demo.innerHTML :>> ', demo.innerHTML);
+
+    const test = document.getElementById('demoTest')
+    // test.innerHTML = "<input type='text'>"
+    // test.innerText = "<input type='text'>"
+    test.textContent = "<input type='text'>"
+
+    console.log('demo.attributes.title.nodeType :>> ', demo.attributes.title.nodeType);
+
+
+    // -- AppendChild
+    demo.appendChild(demoTitle2)
+
+    // -- InsertBefore
+    const demoParagraph2 = document.getElementById('demoParagraph2')
+    demo.insertBefore(demoTitle2, demoParagraph2)
+    
+    // -- RemoveChild()
+    
+    const elementToDelete = document.createElement('p')
+    elementToDelete.innerText = 'Element à supprimer'
+    demo.appendChild(elementToDelete)
+    
+    // demo.removeChild(elementToDelete)
+    // demo.removeChild(demoParagraph2)
+    
+    const demoParagraph = document.getElementById('demoParagraph')
+    // demo.removeChild(demoParagraph)
+
+    // Elements
+
+    const demoElement = document.createElement('h3')
+    demoElement.innerText = "Titre de niveau 3"
+    demoElement.setAttribute('id', 'demoElement')
+    demoElement.setAttribute('class', 'title3')
+    demoElement.setAttribute('class', 'bg-red')
+    
+    demoElement.removeAttribute('class')
+
+    console.log(demoElement.hasAttribute('class'));
+
+    console.log(demoElement.getAttribute('id'));
+
+
+    demo.appendChild(demoElement)
+
+    // Next/previousElementSibling
+
+    const node = demoElement.previousElementSibling
+
+    // console.log(node.textContent);
+
+    // console.log(node);
+
+    // QuerySelector / all
+
+    const el1 = document.querySelector('#demo p')
+    console.log('el1 :>> ', el1);
+    
+    const el2 = document.querySelectorAll('#demo p')
+    console.log('el2 :>> ', el2);
+
+  </script>
+
+</body>
+</html>
