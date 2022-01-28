@@ -1,22 +1,34 @@
-// On récupère nos éléments existants
 const btn = document.getElementById('btn')
 const liste = document.getElementById('liste')
 const itemName= document.getElementById('itemName')
 
+let cptItem = 0
+
 console.log('itemName :>> ', itemName.value);
 
-// On ajoute un comportement au clique du bouton
 btn.onclick = addItem
 
-// Fonction qui permet d'ajouter un item à la liste
 function addItem() {
-
-  // On crée un item de type "li"
   const item = document.createElement('li')
-
-  // On donne un texte au li
   item.innerText = itemName.value
+  item.setAttribute('id', 'item-' + cptItem)
 
-  // On ajoute le li à la liste (ul)
+  let idItem = item.getAttribute('id').split('item-')[1]
+
+  
+  const btnSuppress = document.createElement('button')
+  btnSuppress.innerText = "X"
+  btnSuppress.onclick = function () {
+    removeItem(idItem)
+  }
+  
+  item.appendChild(btnSuppress)
+  
   liste.appendChild(item)
+  cptItem ++
+}
+
+function removeItem(index) {
+  const item = document.getElementById('item-' + index)
+  liste.removeChild(item)
 }
