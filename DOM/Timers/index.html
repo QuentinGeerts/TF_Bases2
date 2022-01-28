@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .div {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>SetTimeOut</h1>
+
+  <div id="div">
+    <button onclick="lancerTimeOut()">Lance</button>
+    <button onclick="stopperTimeOut()">Stop</button>
+
+    <div id="resultTimeOut">
+      0
+    </div>
+  </div>
+
+  <h1>SetInterval</h1>
+
+  <div id="div">
+    <button onclick="lancerInterval()">Lance</button>
+    <button onclick="stopperInterval()">Stop</button>
+
+    <div id="resultInterval">
+      0
+    </div>
+  </div>
+
+
+  <script>
+
+
+
+    let timerTimeOut = null
+    let timerInterval = null
+    let myNumberTimeOut = 1
+    let myNumberInterval = 1
+
+    // -- SetTimeout --
+
+    function lancerTimeOut() {
+      console.log("TimerTimeOut lancé");
+
+      document.getElementById('resultTimeOut').innerText = myNumberTimeOut
+      myNumberTimeOut++
+
+      timerTimeOut = setTimeout(function () {
+        lancerTimeOut()
+      }, 1000)
+    }
+
+    function stopperTimeOut() {
+      console.log("TimerTimeOut stoppé");
+      clearTimeout(timerTimeOut)
+    }
+
+
+    function lancerInterval() {
+      console.log("TimerInterval lancé");
+
+      timerInterval = setInterval(function () {
+        document.getElementById('resultInterval').innerText = myNumberInterval
+        myNumberInterval++
+      }, 1000)
+
+    }
+
+    function stopperInterval() {
+      console.log("TimerInterval stoppé");
+      clearInterval(timerInterval)
+    }
+
+
+  </script>
+
+</body>
+
+</html>
