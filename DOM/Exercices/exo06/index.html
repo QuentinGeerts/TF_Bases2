@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    form > * {
+      display: block;
+      margin: 10px 0;
+    }
+
+    .invalid {
+      border: 1px solid red;
+    }
+
+    .valid {border: 1Px solid green;}
+
+    .error {color: red}
+  </style>
+</head>
+
+<body>
+
+  <h1>Exercice 06</h1>
+
+  <p>
+
+  </p>
+
+  <form name="exo06">
+    <label for="nom">Nom :</label>
+    <input type="text" name="nom" id="nom" min="3">
+    <p id="errorNom" class="error"></p>
+    
+    <label for="prenom">Prénom :</label>
+    <input type="text" name="prenom" id="prenom">
+    <p id="errorPrenom" class="error"></p>
+    
+    <label for="cp">Code postal :</label>
+    <input type="number" name="cp" id="cp" min="1000" max="9999">
+    <p id="errorCp" class="error"></p>
+  </form>
+
+  <br>
+
+  <button onclick="autocomplete()">Auto-complétion</button>
+  <button onclick="reset()">Reset</button>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
