@@ -5,6 +5,7 @@
 const cart = document.getElementById('cart')
 const price = document.getElementById('price')
 
+// Initialisation du prix de panier à 0 quand la page est chargée
 window.onload = (function (value) {
   price.value = value
 })(0)
