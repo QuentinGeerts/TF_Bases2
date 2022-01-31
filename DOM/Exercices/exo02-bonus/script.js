@@ -15,9 +15,10 @@ function addItem() {
 
   let idItem = item.getAttribute('id').split('item-')[1]
 
-  
   const btnSuppress = document.createElement('button')
+
   btnSuppress.innerText = "X"
+  
   btnSuppress.onclick = function () {
     removeItem(idItem)
   }

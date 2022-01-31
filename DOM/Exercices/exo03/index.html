@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <h1>Exercice 03 - Shopping List</h1>
+
+  <p>
+    Créez le programme permettant d’ajouter des articles dans un panier. Il faut pouvoir calculer le total des achats en
+    temps réel.
+  </p>
+
+  <h2>Liste des produits</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Label</th>
+        <th>Prix (€)</th>
+        <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Chaise</td>
+        <td>120</td>
+        <td>
+          <button onclick="AddProductToCart(event)">Ajouter</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Bureau</td>
+        <td>450</td>
+        <td>
+          <button onclick="AddProductToCart(event)">Ajouter</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Plante</td>
+        <td>12.5</td>
+        <td>
+          <button onclick="AddProductToCart(event)">Ajouter</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Lampe</td>
+        <td>35</td>
+        <td>
+          <button onclick="AddProductToCart(event)">Ajouter</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <h2>Panier</h2>
+  Total :
+  <input type="text" id="price" disabled>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Label</th>
+        <th>Prix</th>
+      </tr>
+    </thead>
+    <tbody id='cart'>
+      <!-- Généré par le JS -->
+    </tbody>
+  </table>
+
+  <script src="exo03.js"></script>
+
+</body>
+
+</html>
