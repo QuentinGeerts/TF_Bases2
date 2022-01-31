@@ -11,6 +11,7 @@ window.onload = (function (value) {
 
 function AddProductToCart(event) {
 
+  // Récupérer le produit sélectionné
   const productRow = event.target.parentNode.parentNode
 
   // Créer les composants de mon panier
