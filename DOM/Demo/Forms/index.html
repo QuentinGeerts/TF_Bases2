@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form name="coordonnees">
+
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" value="Quentin">
+
+    <select name="pays" id="pays">
+      <optgroup label="Amérique">
+        <option value="">Canada</option>
+        <option value="">US</option>
+      </optgroup>
+      <optgroup label="Europe">
+        <option value="">Belgique</option>
+        <option value="">France</option>
+      </optgroup>
+
+      <optgroup label="Asie">
+        <option value="">Chine</option>
+        <option value="">Japon</option>
+      </optgroup>
+    </select>
+
+    <div>
+      <input type="radio" name="gender" value="femme" id="femme">
+      <label for="femme">Femme</label> <br>
+      <input type="radio" name="gender" value="homme" id="homme">
+      <label for="homme">Homme</label> <br>
+      <input type="radio" name="gender" value="autre" id="autre">
+      <label for="autre">Autre</label>
+    </div>
+    
+    <button>Envoyer</button>
+  </form>
+
+  <form name="other">
+    my number :
+    <input type="number" name="number" id="number">
+  </form>
+    
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
